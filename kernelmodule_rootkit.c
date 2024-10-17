@@ -17,16 +17,13 @@
 #define DRIVER_AUTHOR "Matt"
 #define DRIVER_DESC   "Kernel Rootkit"
 
-MODULE_LICENSE("GPL");           // Get rid of taint message by declaring code as GPL.
-
-/*  Or with defines, like this: */
-MODULE_AUTHOR(DRIVER_AUTHOR);    // Who wrote this module?
-MODULE_DESCRIPTION(DRIVER_DESC); // What does this module do?
+MODULE_LICENSE("GPL");         
+MODULE_AUTHOR(DRIVER_AUTHOR);   
+MODULE_DESCRIPTION(DRIVER_DESC);
 
 int init(void);
 void cleanup(void);
 
-//Netfilter Defines lab19
 #define NF_IP_PRE_ROUTING	0
 #define NF_IP_LOCAL_IN		1
 #define NF_IP_FORWARD		2
